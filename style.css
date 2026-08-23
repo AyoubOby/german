@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #0b1424;
+    --navy-2: #16223b;
+    --navy-3: #1f2f4d;
+    --sky: #38bdf8;
+    --paper: #f6f7fb;
+    --card: #ffffff;
+    --ink: #1b2436;
+    --muted: #64748b;
+    --line: #e6e9f2;
+    --der: #3b82f6;
+    --die: #f0526e;
+    --das: #f6ac2e;
+    --ok: #10b981;
+    --bad: #ef4444;
+    --radius: 14px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    padding-bottom: 40px;
+}
+h1, h2, h3 { font-family: 'Fraunces', serif; letter-spacing: -0.01em; }
+
+/* ---------- Signature: tricolor thread (nods to the flag, used with restraint) ---------- */
+.flagline {
+    height: 4px;
+    background: linear-gradient(90deg, #1b1b1b 0 33.3%, #dd2323 33.3% 66.6%, #f0c419 66.6% 100%);
+}
+
+/* ---------- Nav ---------- */
+.nav {
+    background: var(--navy);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 22px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav b { font-family: 'Fraunces', serif; font-size: 17px; font-weight: 600; }
+.nav select {
+    padding: 6px 10px;
+    background: var(--navy-3);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    background: radial-gradient(120% 160% at 15% 0%, var(--navy-3) 0%, var(--navy) 55%);
+    color: white;
+    text-align: center;
+    padding: 56px 20px 44px;
+}
+.hero h1 {
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.hero p { color: #b9c4dd; font-size: 16px; max-width: 520px; margin: 0 auto; }
+.eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--sky);
+    background: rgba(56,189,248,0.1);
+    border: 1px solid rgba(56,189,248,0.25);
+    padding: 4px 12px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+/* ---------- Sections ---------- */
+.box {
+    max-width: 840px;
+    margin: 22px auto;
+    padding: 26px 28px;
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--line);
+    box-shadow: 0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -18px rgba(15,23,42,0.25);
+}
+.box h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+.section-sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+
+/* ---------- Gender legend (structural device: color = grammatical gender) ---------- */
+.legend {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: var(--muted);
+}
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.legend .der i { background: var(--der); }
+.legend .die i { background: var(--die); }
+.legend .das i { background: var(--das); }
+
+/* ---------- Vocabulary ---------- */
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px 26px; }
+.cat h3 {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--muted);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--line);
+}
+.word-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    padding: 7px 0;
+    border-bottom: 1px dashed var(--line);
+}
+.word-row:last-child { border-bottom: none; }
+.word-de { font-weight: 600; font-size: 14.5px; }
+.art { font-weight: 700; margin-right: 3px; }
+.art.der { color: var(--der); }
+.art.die { color: var(--die); }
+.art.das { color: var(--das); }
+.gloss { color: var(--muted); font-size: 13.5px; text-align: right; white-space: nowrap; }
+
+/* ---------- Sentences table ---------- */
+table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14.5px; }
+th {
+    background: var(--navy);
+    color: white;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 13px;
+}
+th:first-child { border-radius: 8px 0 0 0; }
+th:last-child { border-radius: 0 8px 0 0; }
+tbody tr:hover { background: #fafbff; }
+tbody tr:nth-child(odd) { background: #fcfcfe; }
+
+/* ---------- Quiz ---------- */
+.quiz { text-align: center; }
+.quiz-progress {
+    height: 6px;
+    background: var(--line);
+    border-radius: 999px;
+    overflow: hidden;
+    margin: 4px 0 20px;
+}
+.quiz-progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--sky), var(--der));
+    transition: width 0.35s ease;
+}
+.quiz button {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    margin: 8px 0;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: var(--ink);
+    transition: border-color 0.15s ease, transform 0.1s ease, background 0.15s ease;
+}
+.quiz button:hover:not(:disabled) { border-color: var(--sky); background: #f0f9ff; }
+.quiz button:active:not(:disabled) { transform: scale(0.99); }
+.quiz button:disabled { cursor: default; }
+#next-btn {
+    background: var(--ok);
+    color: white;
+    width: auto;
+    display: inline-block;
+    padding: 11px 28px;
+    margin-top: 14px;
+    font-weight: 600;
+    border: none;
+}
+#next-btn:hover { filter: brightness(1.06); }
+
+/* ---------- RTL (Arabic) ---------- */
+.rtl { direction: rtl; text-align: right; }
+.rtl .nav { flex-direction: row-reverse; }
+.rtl th, .rtl td { text-align: right; }
+.rtl .word-row { flex-direction: row-reverse; }
+.rtl .gloss { text-align: left; }
+.rtl .legend { flex-direction: row-reverse; }
+
+@media (max-width: 600px) {
+    .box { padding: 20px 16px; margin: 16px 10px; }
+    .hero { padding: 40px 16px 32px; }
+}

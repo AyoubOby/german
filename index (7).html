@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 2 - DeutschApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="nav">
+        <b>DeutschApp 🇩🇪</b>
+        <select onchange="chLang(this.value)">
+            <option value="en">English 🇬🇧</option>
+            <option value="ar">العربية 🇹🇳</option>
+            <option value="de">Deutsch 🇩🇪</option>
+        </select>
+    </div>
+    <div class="flagline"></div>
+
+    <div class="hero">
+        <span class="eyebrow">Kapitel 2</span>
+        <h1 id="t1">Städte und Verkehrsmittel</h1>
+        <p id="t2">Master vocabulary of cities and transport!</p>
+    </div>
+
+    <div class="box">
+        <h2 id="t3">1. Wortschatz (Vocabulary)</h2>
+        <p class="section-sub" id="t3s">Article colors show grammatical gender at a glance.</p>
+
+        <div class="legend">
+            <span class="der"><i></i> der (masc.)</span>
+            <span class="die"><i></i> die (fem.)</span>
+            <span class="das"><i></i> das (neut.)</span>
+        </div>
+
+        <div class="cat-grid">
+            <div class="cat">
+                <h3>Die Stadt</h3>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Bahnhof</span><span id="v1" class="gloss">- Train station</span></div>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Flughafen</span><span id="v2" class="gloss">- Airport</span></div>
+                <div class="word-row"><span class="word-de"><span class="art die">Die</span>Straße</span><span id="v3" class="gloss">- Street</span></div>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Hotel</span><span id="v7" class="gloss">- Hotel</span></div>
+                <div class="word-row"><span class="word-de"><span class="art die">Die</span>Haltestelle</span><span id="v8" class="gloss">- Bus stop</span></div>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Schalter</span><span id="v9" class="gloss">- Ticket counter</span></div>
+            </div>
+            <div class="cat">
+                <h3>Verkehrsmittel</h3>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Zug</span><span id="v4" class="gloss">- Train</span></div>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Bus</span><span id="v5" class="gloss">- Bus</span></div>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Auto</span><span id="v6" class="gloss">- Car</span></div>
+                <div class="word-row"><span class="word-de"><span class="art die">Die</span>U-Bahn</span><span id="v10" class="gloss">- Subway</span></div>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Fahrrad</span><span id="v11" class="gloss">- Bicycle</span></div>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Taxi</span><span id="v12" class="gloss">- Taxi</span></div>
+            </div>
+            <div class="cat">
+                <h3>Richtungen</h3>
+                <div class="word-row"><span class="word-de">links</span><span id="v13" class="gloss">- Left</span></div>
+                <div class="word-row"><span class="word-de">rechts</span><span id="v14" class="gloss">- Right</span></div>
+                <div class="word-row"><span class="word-de">geradeaus</span><span id="v15" class="gloss">- Straight ahead</span></div>
+                <div class="word-row"><span class="word-de">hier</span><span id="v16" class="gloss">- Here</span></div>
+                <div class="word-row"><span class="word-de">dort</span><span id="v17" class="gloss">- There</span></div>
+            </div>
+            <div class="cat">
+                <h3>Reise &amp; Fahrplan</h3>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Ticket</span><span id="v18" class="gloss">- Ticket</span></div>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Fahrplan</span><span id="v19" class="gloss">- Timetable</span></div>
+                <div class="word-row"><span class="word-de"><span class="art das">Das</span>Gleis</span><span id="v20" class="gloss">- Platform</span></div>
+                <div class="word-row"><span class="word-de"><span class="art die">Die</span>Verspätung</span><span id="v21" class="gloss">- Delay</span></div>
+                <div class="word-row"><span class="word-de">pünktlich</span><span id="v22" class="gloss">- On time</span></div>
+                <div class="word-row"><span class="word-de"><span class="art der">Der</span>Passagier</span><span id="v23" class="gloss">- Passenger</span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box">
+        <h2 id="t4">2. Wichtige Sätze (Useful Sentences)</h2><br>
+        <table>
+            <thead><tr><th>Deutsch</th><th id="t5">Translation</th></tr></thead>
+            <tbody>
+                <tr><td>Wo ist der Bahnhof?</td><td id="s1">Where is the train station?</td></tr>
+                <tr><td>Ich fahre mit dem Zug.</td><td id="s2">I am going by train.</td></tr>
+                <tr><td>Wie viel kostet die Fahrkarte?</td><td id="s3">How much does the ticket cost?</td></tr>
+                <tr><td>Wo kann ich ein Ticket kaufen?</td><td id="s4">Where can I buy a ticket?</td></tr>
+                <tr><td>Der Zug hat Verspätung.</td><td id="s5">The train is delayed.</td></tr>
+                <tr><td>Wann fährt der nächste Bus?</td><td id="s6">When does the next bus leave?</td></tr>
+                <tr><td>Ich möchte zum Flughafen.</td><td id="s7">I want to go to the airport.</td></tr>
+                <tr><td>Wo ist die nächste Haltestelle?</td><td id="s8">Where is the nearest bus stop?</td></tr>
+                <tr><td>Gehen Sie geradeaus und dann links.</td><td id="s9">Go straight ahead and then left.</td></tr>
+                <tr><td>Entschuldigung, wo ist der Schalter?</td><td id="s10">Excuse me, where is the ticket counter?</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="box quiz">
+        <h2 id="t6">3. Interactive Quiz (25 Qs)</h2><br>
+        <div class="quiz-progress"><div class="quiz-progress-fill" id="progress-fill"></div></div>
+        <p id="q-txt" style="font-size:18px; font-weight:bold; margin-bottom:15px;"></p>
+        <div id="opts"></div>
+        <button id="next-btn" style="display:none;"></button>
+        <p id="res" style="display:none; margin-top:15px; font-weight:bold; font-size:18px;"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
